@@ -1,0 +1,30 @@
+<div class="row recipe-search">
+  <form [formGroup]="chooseCuisineForm"> 
+    <div class="col-xs-5">
+        <label for="cuisine">I feel like</label>
+    </div>
+    <div class="col-xs-2">
+        <select class="form-control" formControlName="cuisine" (change)="searchCuisine($event)">
+            <option *ngFor= "let cuisine of cuisines" [value]="cuisine">{{cuisine}}</option>
+        </select>
+    </div>
+  </form>
+</div>
+<div class="row recipe-column">
+    <div class="col-xs-2 recipes" *ngFor="let recipe of recipes">
+      {{recipe.recipeName}}
+      <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+        <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+      </a>
+    </div>
+</div>
+<div class="row day-columns">
+    <div class="col-xs-1 child one">Sunday</div>
+    <div class="col-xs-1 child two">Monday</div>
+    <div class="col-xs-1 child three">Tuesday</div>
+    <div class="col-xs-1 child four">Wednesday</div>
+    <div class="col-xs-1 child five">Thursday</div>
+    <div class="col-xs-1 child six">Friday</div>
+    <div class="col-xs-1 child seven">Saturday</div>
+</div>
+
