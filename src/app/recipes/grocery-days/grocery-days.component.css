@@ -1,25 +1,18 @@
-.recipe-search {
-    font-size: 2em;
-    text-align: right;
-}
-
-.col-xs-2.recipes{
+.col-xs-1{
     min-height: 200px;
     border: 2px solid black;
     margin-left: 1.5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 
 @media (min-width: 768px){
-    .recipe-column .col-xs-2 {
+    .day-columns .col-xs-1 {
         width: 100%;
         *width: 100%;
     }
 }
 
 @media (min-width: 992px){
-    .recipe-column .col-xs-2 {
+    .day-columns .col-xs-1 {
         width: 12.5%;
         *width: 12.5%;
     }

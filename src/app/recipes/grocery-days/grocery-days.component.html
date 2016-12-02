@@ -1,0 +1,71 @@
+<div class="row day-columns">
+    <div class="col-xs-1 child one" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 1
+      <div *ngIf="divOneRecipe">
+        {{divOneRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divOneRecipe.id}}" target="_blank">
+          <img src={{divOneRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child two" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 2
+      <div *ngIf="divTwoRecipe">
+        {{divTwoRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divTwoRecipe.id}}" target="_blank">
+          <img src={{divTwoRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child three" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 3
+      <div *ngIf="divThreeRecipe">
+        {{divThreeRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divThreeRecipe.id}}" target="_blank">
+          <img src={{divThreeRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child four" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 4
+      <div *ngIf="divFourRecipe">
+        {{divFourRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divFourRecipe.id}}" target="_blank">
+          <img src={{divFourRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child five" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 5
+      <div *ngIf="divFiveRecipe">
+        {{divFiveRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divFiveRecipe.id}}" target="_blank">
+          <img src={{divFiveRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child six" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 6
+      <div *ngIf="divSixRecipe">
+        {{divSixRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divSixRecipe.id}}" target="_blank">
+          <img src={{divSixRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xs-1 child seven" pDroppable="recipes" (onDrop)="drop($event)">
+      Day 7
+      <div *ngIf="divSevenRecipe">
+        {{divSevenRecipe.recipeName}}
+        <a href="http://www.yummly.co/recipe/{{divSevenRecipe.id}}" target="_blank">
+          <img src={{divSevenRecipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
+        </a>
+      </div>
+    </div>
+</div>

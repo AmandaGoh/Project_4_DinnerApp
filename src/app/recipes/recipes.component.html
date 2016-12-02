@@ -18,13 +18,5 @@
       </a>
     </div>
 </div>
-<div class="row day-columns">
-    <div class="col-xs-1 child one" pDroppable="recipes" (onDrop)="drop($event)">Day 1</div>
-    <div class="col-xs-1 child two" pDroppable="recipes" (onDrop)="drop($event)">Day 2</div>
-    <div class="col-xs-1 child three" pDroppable="recipes" (onDrop)="drop($event)">Day 3</div>
-    <div class="col-xs-1 child four" pDroppable="recipes" (onDrop)="drop($event)">Day 4</div>
-    <div class="col-xs-1 child five" pDroppable="recipes" (onDrop)="drop($event)">Day 5</div>
-    <div class="col-xs-1 child six" pDroppable="recipes" (onDrop)="drop($event)">Day 6</div>
-    <div class="col-xs-1 child seven" pDroppable="recipes" (onDrop)="drop($event)">Day 7</div>
-</div>
+<app-grocery-days [draggedRecipe]="draggedRecipe"></app-grocery-days>
 

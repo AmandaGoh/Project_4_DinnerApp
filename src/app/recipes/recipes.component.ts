@@ -62,17 +62,6 @@ export class RecipesComponent {
     this.draggedRecipe = recipe;
   }
 
-  drop(event){
-    console.log('drop')
-    if(this.draggedRecipe) {
-      this.recipesSearchService.getIngredients(this.draggedRecipe.id)
-                               .then (
-                                 response => 
-                                 this.groceryListService.updateList(response.ingredientLines)
-                               );                        
-    }
-  }
-
   dragEnd(event) {
     console.log('drag end')
     this.draggedRecipe = null;
