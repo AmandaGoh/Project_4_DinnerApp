@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
-import { RecipesSearchService } from './recipes-search.service';
+import { RecipesSearchService } from '../service/recipes-search.service';
 
 @Component({
   selector: 'app-recipes',

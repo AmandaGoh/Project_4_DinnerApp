@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav" *ngIf="!username">
+    <li (click)="loginGoogle()">Log in to view your list: 
+      <img width="30" src="../../assets/icons/gmail.ico" />
+    </li>
+    <li (click)="loginFB()">
+      <img width="30" src="../../assets/icons/fb.ico" />
+    </li>
+  </ul>
+  <ul class="nav navbar-nav" *ngIf="username">
+       <li> Hi {{username}} </li>
+       <li><button md-raised-button (click)="logout()">Logout</button> </li>
+  </ul>
+</nav>
