@@ -3,6 +3,8 @@ import { FormBuilder } from '@angular/forms';
 
 import { RecipesSearchService } from '../service/recipes-search.service';
 
+import { GroceryListService } from '../service/grocery-list.service';
+
 function randomize(array){
     let counter = array.length;
     // While there are elements in the array
@@ -24,14 +26,17 @@ function randomize(array){
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.css'],
-  providers: [ RecipesSearchService ]
+  providers: [ RecipesSearchService, GroceryListService ]
 })
 export class RecipesComponent {
   recipes: any;
   formValue: any;
+  draggedRecipe: any;
+  ingredients: any;
 
   constructor(
     private recipesSearchService: RecipesSearchService,
+    private groceryListService: GroceryListService,
     public fb: FormBuilder
   ){ }
 
@@ -46,11 +51,31 @@ export class RecipesComponent {
     let searchTerm = this.chooseCuisineForm.value.cuisine
     this.recipesSearchService.searchRecipe(searchTerm)
                              .then(
-                               response => 
-                              //  console.log(randomize(response.matches).splice(0,7))
-                               this.recipes = randomize(response.matches).splice(0,7)
-                  
+                               response => this.recipes = randomize(response.matches).splice(0,7)  
+                              
                              )
+  }
+
+  //drag and drop
+  dragStart(event, recipe: any) {
+    console.log('drag start')
+    this.draggedRecipe = recipe;
+  }
+
+  drop(event){
+    console.log('drop')
+    if(this.draggedRecipe) {
+      this.recipesSearchService.getIngredients(this.draggedRecipe.id)
+                               .then (
+                                 response => 
+                                 this.groceryListService.updateList(response.ingredientLines)
+                               );                        
+    }
+  }
+
+  dragEnd(event) {
+    console.log('drag end')
+    this.draggedRecipe = null;
   }
 
 }

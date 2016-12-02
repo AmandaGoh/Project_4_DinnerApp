@@ -13,6 +13,9 @@ import { LoginComponent } from './user/login.component';
 import { ProfileComponent } from './user/profile.component';
 import { routes } from './app.routes';
 
+import { DragDropModule } from 'primeng/primeng';
+import { GroceryListComponent } from './grocery-list/grocery-list.component';
+
 const firebaseConfig = {
     apiKey: "AIzaSyDKW2MbFFE18H5T1RCnFDm3RNg0Mwj01iQ",
     authDomain: "honey-dinner.firebaseapp.com",
@@ -31,7 +34,8 @@ const firebaseAuthConfig = {
     AppComponent,
     RecipesComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    GroceryListComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ const firebaseAuthConfig = {
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
