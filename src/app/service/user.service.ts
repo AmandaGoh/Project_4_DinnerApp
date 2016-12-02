@@ -11,7 +11,7 @@ export class UserService {
     this.af.auth.subscribe(user => {
       if(user) {
         //user logged in
-        console.log(user)
+        // console.log(user)
         this.user = user;
       } else {
         //user NOT logged in
