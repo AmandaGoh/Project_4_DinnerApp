@@ -3,22 +3,8 @@ import { AngularFire, AuthProviders } from 'angularfire2'
 
 @Injectable()
 export class UserService {
-  user = {};
 
-  constructor(
-    public af: AngularFire
-  ) {
-    this.af.auth.subscribe(user => {
-      if(user) {
-        //user logged in
-        // console.log(user)
-        this.user = user;
-      } else {
-        //user NOT logged in
-        this.user = {};
-      }
-    });
-   }
+  constructor( public af: AngularFire) { }
 
    loginGoogle(){
      return this.af.auth.login({

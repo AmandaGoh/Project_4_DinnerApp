@@ -1,3 +1,5 @@
-<p>
-  grocery-list works!
-</p>
+<h1>Your Grocery List</h1>
+<ul>
+  <li *ngFor= "let ingredient of ingredients.day-one | async">
+    {{ ingredient | json }}
+</ul>

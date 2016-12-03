@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import 'rxjs/add/operator/toPromise';
-
 @Injectable()
 export class RecipesSearchService {
 
@@ -22,7 +20,7 @@ export class RecipesSearchService {
   }
 
   getIngredients (recipeID: String) {
-      console.log( 'recipe id is ' + recipeID)
+      // console.log( 'recipe id is ' + recipeID)
       let queryString= `${recipeID}?_app_id=${this.API_ID}&_app_key=${this.API_KEY}`
 
       return this.http.get(this.get_url + queryString)

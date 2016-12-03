@@ -15,6 +15,9 @@ import { routes } from './app.routes';
 
 import { DragDropModule } from 'primeng/primeng';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
+import { GroceryDaysComponent } from './recipes/grocery-days/grocery-days.component';
+
+import './rxjs-extensions';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDKW2MbFFE18H5T1RCnFDm3RNg0Mwj01iQ",
@@ -35,7 +38,8 @@ const firebaseAuthConfig = {
     RecipesComponent,
     LoginComponent,
     ProfileComponent,
-    GroceryListComponent
+    GroceryListComponent,
+    GroceryDaysComponent
   ],
   imports: [
     BrowserModule,

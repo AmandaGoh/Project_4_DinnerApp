@@ -58,12 +58,12 @@ export class RecipesComponent {
 
   //drag and drop
   dragStart(event, recipe: any) {
-    console.log('drag start')
+    // console.log('drag start')
     this.draggedRecipe = recipe;
   }
 
   dragEnd(event) {
-    console.log('drag end')
+    // console.log('drag end')
     this.draggedRecipe = null;
   }
 

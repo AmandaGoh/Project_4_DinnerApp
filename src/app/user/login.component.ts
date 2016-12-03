@@ -1,6 +1,8 @@
 import { Component} from '@angular/core';
 
-import { UserService } from '../service/user.service'
+import { UserService } from '../service/user.service';
+
+import { AngularFire, AuthProviders } from 'angularfire2';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +13,22 @@ import { UserService } from '../service/user.service'
 export class LoginComponent{
 
     username: String;
+    user = {};
 
-    constructor (private userService: UserService){ }
+    constructor(
+      public af: AngularFire,
+      private userService: UserService
+    ) {
+      this.af.auth.subscribe(user => {
+        if(user) {
+          this.user = user;
+          this.username = user.auth.displayName
+        } else {
+          this.user = {};
+          this.username = ''
+        }
+      });
+    }
 
     loginGoogle() {
         this.userService.loginGoogle()

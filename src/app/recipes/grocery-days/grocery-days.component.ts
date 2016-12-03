@@ -27,12 +27,12 @@ export class GroceryDaysComponent{
   ) { }
 
   drop(event){
-  console.log('drop')
+  // console.log('drop')
     if(this.draggedRecipe) {
       this.recipesSearchService.getIngredients(this.draggedRecipe.id)
                                 .then (
                                   response => 
-                                  this.groceryListService.updateList(response.ingredientLines)
+                                  this.groceryListService.updateList(response, event)
                                 );                        
       }
     switch (event.target.className || event.toElement.offsetParent.className) {
