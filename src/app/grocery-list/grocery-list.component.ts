@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseListObservable, AuthProviders } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable, AuthProviders} from 'angularfire2';
 
 @Component({
   selector: 'app-grocery-list',
@@ -7,19 +7,26 @@ import { AngularFire, FirebaseListObservable, AuthProviders } from 'angularfire2
   styleUrls: ['./grocery-list.component.css']
 })
 export class GroceryListComponent{
-  user = {};
-  ingredients: any;
+  user: {
+    uid?: string;
+  };
+  groceryList: FirebaseObjectObservable<any>;
+  message: String;
+  isAuth = false;
 
-  constructor(af : AngularFire) {
+  constructor(
+    public af : AngularFire,
+  ) {
     af.auth.subscribe(user => {
       if(user) {
-        this.user = user;
+        this.isAuth = true;
+        this.groceryList = af.database.object('/grocery-lists/' + user.uid + '/day-one/ingredients')
       } else {
         this.user = {};
+        this.isAuth = false;
+        this.message = 'Please log in to view your grocery list'
       }
     });
-    // this.ingredients = af.database.object('/grocery-lists/'+ this.user.uid)
-    // console.log(this.ingredients)
   }
 
 }
