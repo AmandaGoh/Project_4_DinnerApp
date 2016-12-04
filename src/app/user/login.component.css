@@ -6,8 +6,10 @@ img{
     position:absolute;
     left:20%;
     font-size: 1.5em;
+    color: white; 
 }
 
 .navbar-default {
     padding: 0.5%;
+    background: rgb(31.6%, 31.6%, 31.6%);
 }
