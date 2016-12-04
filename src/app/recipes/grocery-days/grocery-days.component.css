@@ -4,6 +4,10 @@
     margin-left: 1.5%;
 }
 
+.weekday{
+    font-size: 1.5em;
+}
+
 @media (min-width: 768px){
     .day-columns .col-xs-1 {
         width: 100%;

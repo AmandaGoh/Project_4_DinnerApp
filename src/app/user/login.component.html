@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-  <ul class="nav navbar-nav" *ngIf="!username">
+  <ul class="nav navbar-nav justified" *ngIf="!username">
     <li (click)="loginGoogle()">Log in to view your list: 
       <img width="30" src="../../assets/icons/gmail.ico" />
     </li>
@@ -7,8 +7,8 @@
       <img width="30" src="../../assets/icons/fb.ico" />
     </li>
   </ul>
-  <ul class="nav navbar-nav" *ngIf="username">
-       <li> Hi {{username}} </li>
-       <li><button md-raised-button (click)="logout()">Logout</button> </li>
+  <ul class="nav navbar-nav justified" *ngIf="username">
+       <li class="greeting"> Hi, <i>{{username}}</i> drag and drop recipes to update your grocery list!</li>
+       <li><button md-raised-button (click)="logout()">Not you? Logout</button> </li>
   </ul>
 </nav>

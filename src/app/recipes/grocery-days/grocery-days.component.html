@@ -1,6 +1,6 @@
 <div class="row day-columns">
     <div class="col-xs-1 child one" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 1
+      <span class="weekday">Sunday</span>
       <div *ngIf="divOneRecipe">
         {{divOneRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divOneRecipe.id}}" target="_blank">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="col-xs-1 child two" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 2
+      <span class="weekday">Monday</span>
       <div *ngIf="divTwoRecipe">
         {{divTwoRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divTwoRecipe.id}}" target="_blank">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="col-xs-1 child three" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 3
+      <span class="weekday">Tuesday</span>
       <div *ngIf="divThreeRecipe">
         {{divThreeRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divThreeRecipe.id}}" target="_blank">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="col-xs-1 child four" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 4
+      <span class="weekday">Wednesday</span>
       <div *ngIf="divFourRecipe">
         {{divFourRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divFourRecipe.id}}" target="_blank">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="col-xs-1 child five" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 5
+      <span class="weekday">Thursday</span>
       <div *ngIf="divFiveRecipe">
         {{divFiveRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divFiveRecipe.id}}" target="_blank">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="col-xs-1 child six" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 6
+      <span class="weekday">Friday</span>
       <div *ngIf="divSixRecipe">
         {{divSixRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divSixRecipe.id}}" target="_blank">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="col-xs-1 child seven" pDroppable="recipes" (onDrop)="drop($event)">
-      Day 7
+      <span class="weekday">Saturday</span>
       <div *ngIf="divSevenRecipe">
         {{divSevenRecipe.recipeName}}
         <a href="http://www.yummly.co/recipe/{{divSevenRecipe.id}}" target="_blank">

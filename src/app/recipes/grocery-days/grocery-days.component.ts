@@ -1,7 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { RecipesSearchService } from '../../service/recipes-search.service';
 import { GroceryListService } from '../../service/grocery-list.service';
+
+import { AngularFire, FirebaseObjectObservable} from 'angularfire2';
 
 @Component({
   selector: 'app-grocery-days',
@@ -10,6 +12,8 @@ import { GroceryListService } from '../../service/grocery-list.service';
   providers: [ RecipesSearchService, GroceryListService ]
 })
 export class GroceryDaysComponent{
+  user = {};
+  isAuth = false;
 
   @Input() draggedRecipe: any;
 
@@ -24,7 +28,18 @@ export class GroceryDaysComponent{
   constructor(
     private recipesSearchService: RecipesSearchService,
     private groceryListService: GroceryListService,
-  ) { }
+    public af : AngularFire
+  ) { 
+    af.auth.subscribe(user => {
+      if(user) {
+        this.user = user;
+        this.isAuth = true;
+      } else {
+        this.user = {};
+        this.isAuth = false;
+      }
+    });
+  }
 
   drop(event){
   // console.log('drop')

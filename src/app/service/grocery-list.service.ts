@@ -28,8 +28,11 @@ export class GroceryListService {
     if (this.isAuth === false ) {
       console.log('user not logged in')
     } else {
+        // console.log(recipe)
         const newRecipe = {
           name: recipe.name,
+          imageURL: recipe.images[0].hostedMediumUrl,
+          yummlyID: recipe.id,
           ingredients: recipe.ingredientLines,
           servings: recipe.yield
         };

@@ -1,11 +1,43 @@
-<h1>Your Grocery List</h1>
-<section [ngSwitch]="isAuth">
-  <p *ngSwitchCase="false">{{message}}</p>
-  <section *ngSwitchCase="true">
-    <ul *ngIf="(groceryList | async)?.length>0"> Day 1
-      <li *ngFor= "let ingredients of groceryList | async">
-        {{  ingredients | json }}
-      </li>
-    </ul>
-  </section>
-</section>
+<div class="container">
+    <h1>Your Grocery List</h1>
+    <section [ngSwitch]="isAuth">
+      <p *ngSwitchCase="false">{{message}}</p>
+      <section *ngSwitchCase="true">
+        <ul *ngIf="(groceryListDayOne | async)?.length>0"> Sunday
+          <li *ngFor= "let ingredients of groceryListDayOne | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDayTwo | async)?.length>0"> Monday
+          <li *ngFor= "let ingredients of groceryListDayTwo | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDayThree | async)?.length>0"> Tuesday
+          <li *ngFor= "let ingredients of groceryListDayThree | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDayFour | async)?.length>0"> Wednesday
+          <li *ngFor= "let ingredients of groceryListDayFour | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDayFive | async)?.length>0"> Thursday
+          <li *ngFor= "let ingredients of groceryListDayFive | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDaySix | async)?.length>0"> Friday
+          <li *ngFor= "let ingredients of groceryListDaySix | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+        <ul *ngIf="(groceryListDaySeven | async)?.length>0"> Saturday
+          <li *ngFor= "let ingredients of groceryListDaySeven | async">
+            {{  ingredients | json }}
+          </li>
+        </ul>
+      </section>
+    </section>
+  </div>
