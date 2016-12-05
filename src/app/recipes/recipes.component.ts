@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 import { RecipesSearchService } from '../service/recipes-search.service';
-
 import { GroceryListService } from '../service/grocery-list.service';
 
 function randomize(array){
@@ -33,25 +31,21 @@ export class RecipesComponent {
   formValue: any;
   draggedRecipe: any;
   ingredients: any;
+  @Input() searchTerm: string;
 
   constructor(
     private recipesSearchService: RecipesSearchService,
     private groceryListService: GroceryListService,
-    public fb: FormBuilder
   ){ }
 
-  public chooseCuisineForm = this.fb.group({
-    cuisine: ''
-  });
+  ngOnChanges(inputChanges) { this.searchCuisine(inputChanges.searchTerm.currentValue)}
 
-//cuisine options
-  cuisines = ['anything', 'chinese', 'italian', 'indian', 'french', 'thai', 'japanese']
-
-  searchCuisine(event: any){
-    let searchTerm = this.chooseCuisineForm.value.cuisine
+  searchCuisine(searchTerm){
     this.recipesSearchService.searchRecipe(searchTerm)
                              .then(
-                               response => this.recipes = randomize(response.matches).splice(0,7)  
+                               response => 
+                               //split results into 7 arrays
+                               this.recipes = randomize(response.matches).splice(0,7)  
                               
                              )
   }

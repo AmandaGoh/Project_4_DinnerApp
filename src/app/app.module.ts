@@ -10,14 +10,13 @@ import { AngularFireModule, AuthMethods, AuthProviders} from "angularfire2";
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { LoginComponent } from './user/login.component';
-import { ProfileComponent } from './user/profile.component';
-import { routes } from './app.routes';
 
 import { DragDropModule } from 'primeng/primeng';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
 import { GroceryDaysComponent } from './recipes/grocery-days/grocery-days.component';
 
 import './rxjs-extensions';
+import { RecipeSearchComponent } from './recipe-search.component';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDKW2MbFFE18H5T1RCnFDm3RNg0Mwj01iQ",
@@ -37,9 +36,9 @@ const firebaseAuthConfig = {
     AppComponent,
     RecipesComponent,
     LoginComponent,
-    ProfileComponent,
     GroceryListComponent,
-    GroceryDaysComponent
+    GroceryDaysComponent,
+    RecipeSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +46,6 @@ const firebaseAuthConfig = {
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
     DragDropModule
   ],

@@ -11,7 +11,8 @@ img{
 
 .navbar-default {
     padding: 0.5%;
-    background: rgb(31.6%, 31.6%, 31.6%);
+    background:rgb(86.3%, 86.3%, 86.3%);
     border: 0;
     border-radius: 0;
+    margin-bottom: 0;
 }

@@ -1,15 +1,11 @@
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-lg-3">
-            <img src = "../assets/icons/logo.png" width="50%">
-        </div>
-        <div class="col-lg-9">
-            <h1>{{title}}</h1>
-        </div>
-    </div>
-</div>
 <app-login></app-login>
-<router-outlet></router-outlet>
-<app-recipes></app-recipes>
+<div id="rightHalf"></div>
+<div id="leftHalf">
+    <div class = title><h1>{{title}}</h1></div>
+    <app-recipe-search (searchTerm)="searchTerm = $event"></app-recipe-search>
+</div>
+<div class="content">
+<app-recipes [searchTerm]="searchTerm"></app-recipes> 
 <app-grocery-list></app-grocery-list>
+</div>
 

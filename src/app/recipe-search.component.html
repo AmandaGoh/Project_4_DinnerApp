@@ -1,0 +1,12 @@
+<div class="recipe-search">
+  <form [formGroup]="chooseCuisineForm"> 
+    <div class="col-xs-7">
+        <label for="cuisine">I feel like</label>
+    </div>
+    <div class="col-xs-5">
+        <select class="form-control" formControlName="cuisine" (change)="searchCuisine($event)">
+            <option *ngFor= "let cuisine of cuisines" [value]="cuisine">{{cuisine}}</option>
+        </select>
+    </div>
+  </form>
+</div>

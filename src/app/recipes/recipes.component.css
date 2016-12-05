@@ -1,3 +1,7 @@
+h1{
+    text-align: center;
+}
+
 .recipe-search {
     font-size: 2em;
     text-align: right;
@@ -6,9 +10,13 @@
 .col-xs-2.recipes{
     min-height: 200px;
     /*border: 2px solid black;*/
-    margin-left: 1.5%;
+    /*margin-left: 1.5%;*/
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.carousel-inner{
+    padding-left: 10%;
 }
 
 @media (min-width: 768px){
