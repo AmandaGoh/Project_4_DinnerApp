@@ -9,11 +9,12 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "preinstall":   "npm install -g http-server",
-    "postinstall":  "ng build --prod"
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
+    "2": "0.0.1",
     "@angular/common": "2.2.1",
     "@angular/compiler": "2.2.1",
     "@angular/core": "2.2.1",
@@ -22,6 +23,7 @@
     "@angular/platform-browser": "2.2.1",
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/router": "3.2.1",
+    "angularfire": "^2.1.0",
     "angularfire2": "^2.0.0-beta.6",
     "core-js": "^2.4.1",
     "firebase": "^3.6.2",
