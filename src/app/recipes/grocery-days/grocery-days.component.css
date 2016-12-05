@@ -8,6 +8,10 @@
     font-size: 1.5em;
 }
 
+img[src=""] {
+   display: none;
+}
+
 @media (min-width: 768px){
     .day-columns .col-xs-1 {
         width: 100%;

@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 //firebase
-import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
+import { AngularFireModule, AuthMethods, AuthProviders} from "angularfire2";
 
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
