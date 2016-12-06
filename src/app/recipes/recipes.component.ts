@@ -31,6 +31,13 @@ export class RecipesComponent {
   formValue: any;
   draggedRecipe: any;
   ingredients: any;
+  arrayOne= [];
+  arrayTwo= [];
+  arrayThree= [];
+  arrayFour = [];
+  arrayFive = [];
+  arraySix = [];
+  arraySeven = [];
   @Input() searchTerm: string;
 
   constructor(
@@ -45,9 +52,22 @@ export class RecipesComponent {
                              .then(
                                response => 
                                //split results into 7 arrays
-                               this.recipes = randomize(response.matches).splice(0,7)  
+                               this.splitArray(response.matches)
+                              //  this.recipes = randomize(response.matches).splice(0,7)  
                               
                              )
+  }
+
+  splitArray(response) {
+    let randomizeArray = randomize(response)
+    this.arrayOne = randomizeArray.splice(0,7)
+    this.arrayTwo = randomizeArray.splice(0,7)
+    this.arrayThree = randomizeArray.splice(0,7)
+    this.arrayFour = randomizeArray.splice(0,7)
+    this.arrayFive = randomizeArray.splice(0,7)
+    this.arraySix = randomizeArray.splice(0,7)
+    this.arraySeven = randomizeArray
+    // console.log(randomizeArray)
   }
 
   //drag and drop
