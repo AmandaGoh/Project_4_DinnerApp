@@ -4,8 +4,8 @@ import { Http, Response } from '@angular/http';
 @Injectable()
 export class RecipesSearchService {
 
-  private search_url = 'http://api.yummly.com/v1/api/recipes?'
-  private get_url = 'http://api.yummly.com/v1/api/recipe/'
+  private search_url = 'https://api.yummly.com/v1/api/recipes?'
+  private get_url = 'https://api.yummly.com/v1/api/recipe/'
   private API_ID = 'aba9649e'
   private API_KEY = 'b9fd43382a58f32002460910507123b1' 
 
