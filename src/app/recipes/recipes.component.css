@@ -27,6 +27,7 @@ h1{
 
 .carousel-inner{
     padding-left: 10%;
+    width: 100%;
 }
 
 @media (min-width: 768px){
