@@ -44,6 +44,7 @@ export class GroceryListService {
 
         var newRecipeKey = newRecipeRef.key;
         var ingredients = newRecipe.ingredients;
+        console.log(ingredients)
         //update weekly recipe list in db
         switch (event.target.className || event.toElement.offsetParent.className) {
         case 'col-xs-1 child one':
@@ -77,6 +78,11 @@ export class GroceryListService {
 
     }
 
+  }
+
+  setArray(list){
+    console.log(list)
+    this.af.database.object('/grocery-lists/' + this.user.uid + '/day-one').update({ingredients: list})
   }
 
 }

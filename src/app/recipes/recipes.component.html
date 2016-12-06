@@ -1,70 +1,89 @@
-<h1>Drag and drop recipes for the week!</h1>
+<h1>Drag and drop recipes for the week</h1>
 <div class="row recipe-column">
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-    <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-          <li data-target="#myCarousel" data-slide-to="4"></li>
-          <li data-target="#myCarousel" data-slide-to="5"></li>
-          <li data-target="#myCarousel" data-slide-to="6"></li>
-    </ol>
     <div class="carousel-inner" role="listbox">
       <div class="item active">
           <div class="col-xs-2 recipes" *ngFor="let recipe of arrayOne" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+              {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+              <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+              </a>
+            </div>
           </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arrayTwo" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+              {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+              <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+              </a>
+            </div>
          </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arrayThree" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+              {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+              <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+              </a>
+            </div>
         </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arrayFour" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+               {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+              <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+              </a>
+            </div>
         </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arrayFive" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+                {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+                <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                  <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+                </a>
+            </div>
         </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arraySix" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+                {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+                <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                  <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+                </a>
+            </div>
         </div>
       </div>
       <div class="item">
         <div class="col-xs-2 recipes" *ngFor="let recipe of arraySeven" pDraggable="recipes" (onDragStart)="dragStart($event,recipe)" (onDragEnd)="dragEnd($event)">
-            {{recipe.recipeName}}
-            <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
-              <img src={{recipe.imageUrlsBySize[90]}} width= "100%" height= "80%">
-            </a>
+            <div class="recipe-name">
+                {{recipe.recipeName}}
+            </div>
+            <div class="recipe-image">
+                <a href="http://www.yummly.co/recipe/{{recipe.id}}" target="_blank">
+                  <img src={{recipe.imageUrlsBySize[90]}} width= "100%">
+                </a>
+            </div>
         </div>
       </div>
     </div>

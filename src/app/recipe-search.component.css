@@ -1,4 +1,10 @@
 .recipe-search{
     margin-top: 20%;
     font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+option{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
 }

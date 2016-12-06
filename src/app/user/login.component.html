@@ -1,14 +1,19 @@
 <nav class="navbar navbar-default">
-  <ul class="nav navbar-nav justified" *ngIf="!username">
-    <li (click)="loginGoogle()">Log in to view your list: 
-      <img width="30" src="../../assets/icons/gmail.ico" />
-    </li>
-    <li (click)="loginFB()">
-      <img width="30" src="../../assets/icons/fb.ico" />
-    </li>
-  </ul>
-  <ul class="nav navbar-nav justified" *ngIf="username">
-       <li class="greeting"> Hi, <i>{{username}}</i>!</li>
-       <li><button class="btn btn-danger" (click)="logout()">Not you? Logout</button> </li>
-  </ul>
+      <a class="navbar-brand" href="#">
+      <img width="30" src="../assets/icons/logo.png" style="display: inline-block;">
+      <span style="display: inline-block;">Honey, what's for dinner?</span>
+      </a>
+      <ul class="nav navbar-nav navbar-right" *ngIf="!username">
+        <li (click)="loginGoogle()">Log in to view your list: 
+          <img width="30" src="../../assets/icons/gmail.ico" />
+        </li>
+        <li (click)="loginFB()">
+          <img width="30" src="../../assets/icons/fb.ico" />
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text navbar-right greeting" *ngIf="username">Signed in as {{username}}
+          <button (click)="logout()">Not you? Logout</button> 
+        </p>
+      </ul>
 </nav>
