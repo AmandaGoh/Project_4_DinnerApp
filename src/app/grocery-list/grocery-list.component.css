@@ -14,12 +14,13 @@ h1{
     width: 50%;
     position: absolute;
     left: 0px;
-    height: 150%;
+    min-height: 160%;
     padding: 10%;
     margin-top: 8%;
 }
 
 #rightHalf {
+   padding-left: 5%;
    width: 50%;
    position: absolute;
    right: 0px;
@@ -29,5 +30,5 @@ h1{
 
 .rightInnerHalf{
     overflow: scroll;
-    height: 90%;
+    height: 75%;
 }

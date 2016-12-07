@@ -17,6 +17,7 @@ import { GroceryDaysComponent } from './recipes/grocery-days/grocery-days.compon
 
 import './rxjs-extensions';
 import { RecipeSearchComponent } from './recipe-search.component';
+import { FooterComponent } from './user/footer.component';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDKW2MbFFE18H5T1RCnFDm3RNg0Mwj01iQ",
@@ -38,7 +39,8 @@ const firebaseAuthConfig = {
     LoginComponent,
     GroceryListComponent,
     GroceryDaysComponent,
-    RecipeSearchComponent
+    RecipeSearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
