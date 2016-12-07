@@ -1,5 +1,6 @@
-<div class="container">
-    <div class="row day-columns">
+<div [ngSwitch]="isAuth" class="container">
+  <div *ngSwitchCase="false" class="quote"></div>
+    <div *ngSwitchCase="true" class="row day-columns">
         <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Sunday</span>
           <div class="recipe-box child one" *ngIf="divOneRecipe">

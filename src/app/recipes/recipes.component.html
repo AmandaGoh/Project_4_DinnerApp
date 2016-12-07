@@ -1,4 +1,7 @@
-<h1>Drag and drop recipes for the week</h1>
+<section [ngSwitch]="isAuth">
+  <h1 *ngSwitchCase="true" >Drag and drop recipes for the week</h1>
+  <h1 *ngSwitchCase="false">Log in to start dragging and dropping recipes!</h1>
+</section>
 <div class="row recipe-column">
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner" role="listbox">

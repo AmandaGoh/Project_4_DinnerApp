@@ -3,6 +3,8 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { RecipesSearchService } from '../service/recipes-search.service';
 import { GroceryListService } from '../service/grocery-list.service';
 
+import { AngularFire } from 'angularfire2';
+
 function randomize(array){
     let counter = array.length;
     // While there are elements in the array
@@ -26,7 +28,10 @@ function randomize(array){
   styleUrls: ['./recipes.component.css'],
   providers: [ RecipesSearchService, GroceryListService ]
 })
-export class RecipesComponent {
+
+export class RecipesComponent implements OnInit {
+  user = {};
+  isAuth = false;
   recipes: any;
   formValue: any;
   draggedRecipe: any;
@@ -43,7 +48,20 @@ export class RecipesComponent {
   constructor(
     private recipesSearchService: RecipesSearchService,
     private groceryListService: GroceryListService,
+    public af : AngularFire
   ){ }
+
+  ngOnInit() {
+    this.af.auth.subscribe(user => {
+      if(user) {
+        this.user = user;
+        this.isAuth = true;
+      } else {
+        this.user = {};
+        this.isAuth = false;
+      } 
+    })
+  }
 
   ngOnChanges(inputChanges) { this.searchCuisine(inputChanges.searchTerm.currentValue)}
 
