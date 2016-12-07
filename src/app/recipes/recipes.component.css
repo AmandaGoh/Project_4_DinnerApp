@@ -9,12 +9,18 @@ h1{
     height: 70px;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    cursor: grab;
 }
 
 .recipe-image{
     width: 100%;
     overflow: hidden;
     height: 150px;
+    cursor: default;
+}
+
+img {
+    cursor: default;
 }
 
 .col-xs-2.recipes{

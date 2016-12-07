@@ -1,0 +1,33 @@
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+}
+
+.weekday{
+    font-size: 1.5em;
+}
+
+#leftHalf {
+    background: url('../../assets/ingredients.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 150%;
+    padding: 10%;
+    margin-top: 8%;
+}
+
+#rightHalf {
+   width: 50%;
+   position: absolute;
+   right: 0px;
+   height: 150%; 
+   margin-top: 8%;
+}
+
+.rightInnerHalf{
+    overflow: scroll;
+    height: 90%;
+}

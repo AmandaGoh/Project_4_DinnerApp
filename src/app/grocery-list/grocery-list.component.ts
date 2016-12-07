@@ -47,6 +47,7 @@ export class GroceryListComponent implements OnInit {
       }
     });
   }
+  
 
   //delete ingredient
   // removeItem(ingredient){
