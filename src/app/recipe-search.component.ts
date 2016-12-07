@@ -17,7 +17,7 @@ export class RecipeSearchComponent{
   });
 
 //cuisine options
-  cuisines = ['anything', 'chinese', 'italian', 'indian', 'french', 'thai', 'japanese']
+  cuisines = ['anything', 'chinese', 'italian', 'indian', 'french', 'thai', 'japanese', 'mexican', 'american']
 
   searchCuisine(event: any){
     this.searchTerm.emit(this.chooseCuisineForm.value.cuisine)
