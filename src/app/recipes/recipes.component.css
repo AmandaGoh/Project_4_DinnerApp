@@ -9,7 +9,18 @@ h1{
     min-height: 70px;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    cursor: move;
+    cursor: url('../../../assets/grab-cursor.png'), auto;
+    cursor: -webkit-grab;
+    cursor: -mox-grab;
     cursor: grab;
+}
+
+.recipe-name:active{
+    cursor: url('../../../assets/grabbing-cursor.png'), auto;
+    cursor: -webkit-grabbing;
+    cursor:    -moz-grabbing;
+    cursor:         grabbing;
 }
 
 .recipe-image{
