@@ -1,18 +1,24 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { AngularFire, AuthProviders } from 'angularfire2'
+import { AngularFire, AuthProviders } from 'angularfire2';
+
+import { NotificationsService } from 'angular2-notifications';
 
 @Injectable()
 export class UserService {
 
-  public errorReceived = new EventEmitter<any>();
-
-  constructor( public af: AngularFire) { }
+  constructor( 
+    public af: AngularFire,
+    private notificationsService: NotificationsService
+  ) { }
 
    loginGoogle(){
      return this.af.auth.login({
        provider: AuthProviders.Google
-     }).catch(function(error){
-     console.log(error)
+     }).catch(error => {
+        this.notificationsService.error(
+                            'Error',
+                             error.message
+                          )
     });
    }
 
@@ -20,7 +26,11 @@ export class UserService {
      return this.af.auth.login({
        provider: AuthProviders.Facebook
      }).catch(error => {
-       this.errorReceived.emit(error.message)
+      //  console.log(error.message)
+       this.notificationsService.error(
+                            'Error',
+                             error.message
+                          )
      })
    }
 

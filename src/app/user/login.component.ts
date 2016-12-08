@@ -11,9 +11,15 @@ import { AngularFire, AuthProviders } from 'angularfire2';
   providers: [ UserService ]
 })
 export class LoginComponent{
-    errorMsg: String;
     username: String;
     user = {};
+    isAuth = false;
+
+    public options = {
+    position: ["bottom", "right"],
+    timeOut: 5000,
+    lastOnBottom: true
+    }
 
     constructor(
       public af: AngularFire,
@@ -23,9 +29,11 @@ export class LoginComponent{
         if(user) {
           this.user = user;
           this.username = user.auth.displayName
+          this.isAuth = true;
         } else {
           this.user = {};
           this.username = ''
+          this.isAuth = false;
         }
       });
     }
@@ -38,23 +46,11 @@ export class LoginComponent{
     loginFB() {
         this.userService.loginFB()
                         .then ( response => {
-                          if(response) {
-                            this.username = response.auth.displayName
+                          if(response){
+                          // console.log(response.status)
+                          this.username = response.auth.displayName
                           }
-                          // } else {
-                          //   console.log(response)
-                          // }
-                          // error => console.log(error)
-                          // );
                         })
-                       
-        this.userService.errorReceived.subscribe(
-              error => {
-                if (error) {
-                  this.errorMsg = error
-                }
-              }
-        )
     }
 
     logout() {

@@ -17,12 +17,17 @@
     "2": "0.0.1",
     "@angular/common": "2.2.1",
     "@angular/compiler": "2.2.1",
+    "@angular/compiler-cli": "2.2.1",
     "@angular/core": "2.2.1",
     "@angular/forms": "2.2.1",
     "@angular/http": "2.2.1",
     "@angular/platform-browser": "2.2.1",
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/router": "3.2.1",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "^6.0.42",
+    "angular-cli": "1.0.0-beta.21",
+    "angular2-notifications": "^0.4.47",
     "angularfire": "^2.1.0",
     "angularfire2": "^2.0.0-beta.6",
     "core-js": "^2.4.1",
@@ -31,12 +36,8 @@
     "primeng": "^1.0.0",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23",
-    "@angular/compiler-cli": "2.2.1",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.21",
-    "typescript": "~2.0.3"
+    "typescript": "~2.0.3",
+    "zone.js": "^0.6.23"
   },
   "devDependencies": {
     "codelyzer": "~1.0.0-beta.3",
@@ -50,7 +51,6 @@
     "protractor": "4.0.9",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
-    
     "webdriver-manager": "10.2.5"
   }
 }

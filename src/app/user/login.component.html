@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" [ngSwitch]="isAuth">
       <a class="navbar-brand" href="#">
       <img width="30" src="../assets/icons/logo.png" style="display: inline-block;">
       <span style="display: inline-block;">Honey, what's for dinner?</span>
       </a>
-      <ul class="nav navbar-nav navbar-right" *ngIf="!username">
+      <ul class="nav navbar-nav navbar-right" *ngSwitchCase="false">
         <li (click)="loginGoogle()">Log in to view your list: 
           <img width="30" src="../../assets/icons/gmail.ico" />
         </li>
@@ -12,11 +12,9 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <p class="navbar-text navbar-right greeting" *ngIf="username">Signed in as {{username}}
+        <p class="navbar-text navbar-right greeting" *ngSwitchCase="true">Signed in as {{username}}
           <button (click)="logout()">Not you? Logout</button> 
         </p>
       </ul>
 </nav>
-<div class="error-message">
-      {{errorMsg}}
-</div>
+<simple-notifications [options]="options"></simple-notifications>

@@ -12,6 +12,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { LoginComponent } from './user/login.component';
 
 import { DragDropModule } from 'primeng/primeng';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
 import { GroceryDaysComponent } from './recipes/grocery-days/grocery-days.component';
 
@@ -49,7 +50,8 @@ const firebaseAuthConfig = {
     HttpModule,
     JsonpModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
-    DragDropModule
+    DragDropModule,
+    SimpleNotificationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
