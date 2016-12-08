@@ -47,6 +47,8 @@ export class GroceryDaysComponent implements OnInit{
       } else {
         this.user = {};
         this.isAuth = false;
+        // this.af.database.object('/weekly-lists/' + user.uid + '/day-one/recipe' ).;
+        // console.log('user logged out')
       }
     })
   }
@@ -197,8 +199,9 @@ export class GroceryDaysComponent implements OnInit{
 
 
   drop(event){
-  // console.log('drop')
+  console.log('drop')
     if(this.draggedRecipe) {
+      console.log(this.draggedRecipe)
       this.recipesSearchService.getIngredients(this.draggedRecipe.id)
                                 .then (
                                   response => 

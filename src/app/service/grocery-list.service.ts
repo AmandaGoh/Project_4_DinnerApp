@@ -46,8 +46,13 @@ export class GroceryListService {
         var ingredients = newRecipe.ingredients;
         // console.log(ingredients)
         //update weekly recipe list in db
+        // console.log(event)
         switch (event.target.className || event.toElement.offsetParent.className) {
         case 'recipe-box child one':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-one').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-one').update({ingredients: ingredients})
+          break;
+        case 'col-xs-1 child one':
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-one').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-one').update({ingredients: ingredients})
           break;
@@ -55,7 +60,15 @@ export class GroceryListService {
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-two').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-two').update({ingredients: ingredients})
           break;
+        case 'col-xs-1 child two':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-two').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-two').update({ingredients: ingredients})
+          break;
         case 'recipe-box child three':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-three').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-three').update({ingredients: ingredients})
+          break;
+        case 'col-xs-1 child three':
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-three').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-three').update({ingredients: ingredients})
           break;
@@ -63,7 +76,15 @@ export class GroceryListService {
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-four').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-four').update({ingredients: ingredients})
           break;
+        case 'col-xs-1 child four':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-four').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-four').update({ingredients: ingredients})
+          break;
         case 'recipe-box child five':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-five').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-five').update({ingredients: ingredients})
+          break;
+        case 'col-xs-1 child five':
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-five').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-five').update({ingredients: ingredients})
           break;
@@ -71,7 +92,14 @@ export class GroceryListService {
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-six').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-six').update({ingredients: ingredients})
           break;
+        case 'col-xs-1 child six':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-six').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-six').update({ingredients: ingredients})
+          break;
         case 'recipe-box child seven':
+          this.af.database.object('/weekly-lists/' + this.user.uid + '/day-seven').update({recipe: newRecipeKey})
+          this.af.database.object('/grocery-lists/' + this.user.uid + '/day-seven').update({ingredients: ingredients})
+        case 'col-xs-1 child seven':
           this.af.database.object('/weekly-lists/' + this.user.uid + '/day-seven').update({recipe: newRecipeKey})
           this.af.database.object('/grocery-lists/' + this.user.uid + '/day-seven').update({ingredients: ingredients})
       }
@@ -80,9 +108,9 @@ export class GroceryListService {
 
   }
 
-  setArray(list){
-    console.log(list)
-    this.af.database.object('/grocery-lists/' + this.user.uid + '/day-one').update({ingredients: list})
-  }
+  // setArray(list){
+  //   // console.log(list)
+  //   this.af.database.object('/grocery-lists/' + this.user.uid + '/day-one').update({ingredients: list})
+  // }
 
 }

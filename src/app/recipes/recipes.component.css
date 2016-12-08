@@ -27,11 +27,18 @@ h1{
     width: 100%;
     overflow: hidden;
     min-height: 150px;
-    cursor: default;
+    cursor: move;
+    cursor: url('../../../assets/grab-cursor.png'), auto;
+    cursor: -webkit-grab;
+    cursor: -mox-grab;
+    cursor: grab;
 }
 
-img {
-    cursor: default;
+.recipe-image:active{
+    cursor: url('../../../assets/grabbing-cursor.png'), auto;
+    cursor: -webkit-grabbing;
+    cursor:    -moz-grabbing;
+    cursor:         grabbing;
 }
 
 .col-xs-2.recipes{

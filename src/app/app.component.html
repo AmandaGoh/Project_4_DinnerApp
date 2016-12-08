@@ -1,12 +1,13 @@
-<app-login></app-login>
-<div id="rightHalf"></div>
-<div id="leftHalf">
-    <div class = title><h1>{{title}}</h1></div>
-    <app-recipe-search (searchTerm)="searchTerm = $event"></app-recipe-search>
+<div>
+    <app-login></app-login>
+    <div id="rightHalf"></div>
+    <div id="leftHalf">
+        <div class = title><h1>{{title}}</h1></div>
+        <app-recipe-search (searchTerm)="searchTerm = $event"></app-recipe-search>
+    </div>
+    <div class="content">
+        <app-recipes [searchTerm]="searchTerm"></app-recipes> 
+        <app-grocery-list></app-grocery-list>
+    </div>
+    <app-footer></app-footer>
 </div>
-<div class="content">
-    <app-recipes [searchTerm]="searchTerm"></app-recipes> 
-    <app-grocery-list></app-grocery-list>
-</div>
-<app-footer></app-footer>
-

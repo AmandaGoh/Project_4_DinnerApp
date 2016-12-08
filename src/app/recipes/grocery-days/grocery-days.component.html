@@ -1,7 +1,7 @@
 <div [ngSwitch]="isAuth" class="container">
   <div *ngSwitchCase="false" class="quote"></div>
     <div *ngSwitchCase="true" class="row day-columns">
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child one" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Sunday</span>
           <div class="recipe-box child one" *ngIf="divOneRecipe">
               {{divOneRecipe.name}}
@@ -11,7 +11,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child two" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Monday</span>
           <div class="recipe-box child two" *ngIf="divTwoRecipe">
             {{divTwoRecipe.name}}
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child three" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Tuesday</span>
           <div class="recipe-box child three" *ngIf="divThreeRecipe">
             {{divThreeRecipe.name}}
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child four" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Wednesday</span>
           <div class="recipe-box child four" *ngIf="divFourRecipe">
             {{divFourRecipe.name}}
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child five" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Thursday</span>
           <div class="recipe-box child five" *ngIf="divFiveRecipe">
             {{divFiveRecipe.name}}
@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child six" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Friday</span>
           <div class="recipe-box child six" *ngIf="divSixRecipe">
             {{divSixRecipe.name}}
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <div class="col-xs-1" pDroppable="recipes" (onDrop)="drop($event)">
+        <div class="col-xs-1 child seven" pDroppable="recipes" (onDrop)="drop($event)">
           <span class="weekday">Saturday</span>
           <div class="recipe-box child seven" *ngIf="divSevenRecipe">
             {{divSevenRecipe.name}}
