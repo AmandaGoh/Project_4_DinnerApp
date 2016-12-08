@@ -11,7 +11,7 @@ import { AngularFire, AuthProviders } from 'angularfire2';
   providers: [ UserService ]
 })
 export class LoginComponent{
-
+    errorMsg: String;
     username: String;
     user = {};
 
@@ -37,7 +37,24 @@ export class LoginComponent{
 
     loginFB() {
         this.userService.loginFB()
-                        .then ( response => this.username = response.auth.displayName)
+                        .then ( response => {
+                          if(response) {
+                            this.username = response.auth.displayName
+                          }
+                          // } else {
+                          //   console.log(response)
+                          // }
+                          // error => console.log(error)
+                          // );
+                        })
+                       
+        this.userService.errorReceived.subscribe(
+              error => {
+                if (error) {
+                  this.errorMsg = error
+                }
+              }
+        )
     }
 
     logout() {

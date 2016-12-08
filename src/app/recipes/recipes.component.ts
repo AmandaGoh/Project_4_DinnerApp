@@ -90,9 +90,9 @@ export class RecipesComponent implements OnInit {
 
   //drag and drop
   dragStart(event, recipe: any) {
-    console.log(event)
+    // console.log(event)
     this.draggedRecipe = recipe;
-    console.log(this.draggedRecipe)
+    // console.log(this.draggedRecipe)
   }
 
   dragEnd(event) {
