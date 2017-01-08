@@ -49,6 +49,10 @@ h1{
     margin-bottom: 2%;
 }
 
+.col-xs-2.recipes:hover{
+    background: rgba(58.5%, 58.5%, 58.5%, 0.5%);
+}
+
 .carousel-inner{
     padding-left: 10%;
     min-width: 100%;

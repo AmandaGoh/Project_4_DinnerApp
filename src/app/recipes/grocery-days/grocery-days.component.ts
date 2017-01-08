@@ -199,37 +199,15 @@ export class GroceryDaysComponent implements OnInit{
 
 
   drop(event){
-  console.log('drop')
+  // console.log('drop')
     if(this.draggedRecipe) {
-      console.log(this.draggedRecipe)
+      // console.log(this.draggedRecipe)
       this.recipesSearchService.getIngredients(this.draggedRecipe.id)
                                 .then (
                                   response => 
                                   this.groceryListService.updateList(response, event)
                                 );                        
       }
-    // switch (event.target.className || event.toElement.offsetParent.className) {
-    //   case 'col-xs-1 child one':
-    //     this.divOneRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child two':
-    //     this.divTwoRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child three':
-    //     this.divThreeRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child four':
-    //     this.divFourRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child five':
-    //     this.divFiveRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child six':
-    //     this.divSixRecipe = this.draggedRecipe;
-    //     break;
-    //   case 'col-xs-1 child seven':
-    //     this.divSevenRecipe = this.draggedRecipe;
-    // }
   }
 
 
